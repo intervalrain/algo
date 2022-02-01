@@ -9,7 +9,7 @@
 1. TreeNode
 
 ## [Chapter](https://github.com/intervalrain/algo/tree/master/Topic)
-1. [Arrays and Strings](https://github.com/intervalrain/algo/tree/master/ArrayAndStrings)
-2. [Linked List](https://github.com/intervalrain/algo/tree/master/LinkedList)
-3. [Stack and Queues](https://github.com/intervalrain/algo/tree/master/StackAndQueues)
+1. [Arrays and Strings](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings)
+2. [Linked List](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList)
+3. [Stack and Queues](https://github.com/intervalrain/algo/tree/master/Topic/StackAndQueues)
 
