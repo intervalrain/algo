@@ -50,22 +50,22 @@ public class TreeNode<T>{
         return Math.max(sizeSub(root.left, curr * 2 + 1), sizeSub(root.right, curr * 2 + 2));
     }
 
-    public Object[] ToArray(TreeNode<T> root){
-        if (root == null) return null;
-        Object[] array = new Object[size()];
-        ToArraySub(root, 0, array);
+    public Object[] toArray(){
+        TreeNode<T> root = this;
+        Object[] array = new Object[this.size()];
+        toArraySub(root, 0, array);
         return array;
     }
 
-    private void ToArraySub(TreeNode<T> root, int index, Object[] array){
+    private void toArraySub(TreeNode<T> root, int index, Object[] array){
         if (root == null) return;
         array[index] = root.val;
-        ToArraySub(root.left, index * 2 + 1, array);
-        ToArraySub(root.right, index * 2 + 2, array);
+        toArraySub(root.left, index * 2 + 1, array);
+        toArraySub(root.right, index * 2 + 2, array);
     }
 
     public String toString(){
-        return Arrays.toString(ToArray(this));
+        return Arrays.toString(this.toArray());
     }
 
 }
