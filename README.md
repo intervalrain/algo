@@ -22,5 +22,7 @@
 > + [String Rotation](https://https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings/StringRotation.java)
 
 2. [Linked List](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList)
+> + [Remove Duplicates](https://https://github.com/intervalrain/algo/tree/master/Topic/LinkedList/RemoveDups.java)
+
 3. [Stack and Queues](https://github.com/intervalrain/algo/tree/master/Topic/StackAndQueues)
 
