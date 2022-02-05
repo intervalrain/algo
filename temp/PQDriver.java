@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class PQDriver {
-    private static class ListNode{
+    public static class ListNode{
         int val;
         ListNode next;
 

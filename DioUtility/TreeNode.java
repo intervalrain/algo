@@ -24,7 +24,7 @@ public class TreeNode<T>{
         TreeNode<T> root = new TreeNode<T>(array[0]);
         List<TreeNode<T>> q = new ArrayList<>();
         q.add(root);
-        for (int i = 1; i <array.length; i++){
+        for (int i = 1; i < array.length; i++){
             TreeNode<T> node = new TreeNode<T>(array[i]);
             q.add(node);
         }
@@ -34,6 +34,23 @@ public class TreeNode<T>{
         }
         if (array.length > 1) this.left = q.get(1);
         if (array.length > 2) this.right = q.get(2);
+    }
+
+    public TreeNode(List<T> array){
+        this(array.get(0));
+        TreeNode<T> root = new TreeNode<T>(array.get(0));
+        List<TreeNode<T>> q = new ArrayList<>();
+        q.add(root);
+        for (int i = 0; i < array.size(); i++){
+            TreeNode<T> node = new TreeNode<T>(array.get(i));
+            q.add(node);
+        }
+        for (int i = 0; i < array.size(); i++){
+            if (2 * i + 1 < array.size()) q.get(i).left = q.get(2 * i + 1);
+            if (2 * i + 2 < array.size()) q.get(i).left = q.get(2 * i + 2);
+        }
+        if (array.size() > 1) this.left = q.get(1);
+        if (array.size() > 2) this.right = q.get(2);
     }
 
     public int size(){
@@ -67,5 +84,5 @@ public class TreeNode<T>{
     public String toString(){
         return Arrays.toString(this.toArray());
     }
-
+    
 }
