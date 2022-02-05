@@ -24,4 +24,13 @@ public class ReturnKthToLast{
         }
         return curr.val;
     }
+
+    @Test
+    public void test1(){
+        ListNode<Integer> head = new ListNode<>(7,8,6,4,5,9,1,2,3);
+        int k = 3;
+        int expected = 1;
+        int actual = printKthToLast(head, k);
+        assertEquals(expected, actual);
+    }
 }
