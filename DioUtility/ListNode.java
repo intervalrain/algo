@@ -76,9 +76,4 @@ public class ListNode<T>{
             return "Cycled List";
         return Arrays.toString(this.toArray());
     }
-
-
-    
-
-
 }
