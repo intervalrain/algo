@@ -22,19 +22,72 @@ import DioUtility.arrayGenerator;
  */
 public class RadixSort {
 
-    public static void sort(int array[]){
-        int n = array.length;
-        int m = getMax(array);
-        
-        for (int exp = 1; m / exp > 0; exp *= 10)
-            countSort(array, n, exp);
+    private int max;
+    private int min;
+    private boolean ex_mode;
+    private int[] pos;
+    private int[] neg;
+    private int[] arr;
+    
+
+    public void init(){
+        max = arr[0];
+        for (int i = 1; i < arr.length; i++){
+            max = Math.max(max, arr[i]);
+            if (arr[i] < 0){
+                init_ex();
+                ex_mode = true;
+                break;
+            }
+        }
     }
 
-    static int getMax(int array[]){
-        int max = array[0];
-        for (int i = 1; i < array.length; i++)
-            max = Math.max(array[i], max);
-        return max;
+    /** optimize for negative numbers */
+    public void init_ex(){
+        max = Integer.MIN_VALUE;
+        min = Integer.MAX_VALUE;
+        int cnt_p = 0;
+        int cnt_n = 0;
+        for (int i = 0; i < arr.length; i++){
+            max = Math.max(max, arr[i]);
+            min = Math.min(min, arr[i]);
+            if (arr[i] >= 0)
+                cnt_p++;
+            else
+                cnt_n++;
+        }
+        pos = new int[cnt_p];
+        neg = new int[cnt_n];
+        cnt_n = 0; cnt_p = 0;
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] < 0)
+                neg[cnt_n++] = arr[i] - min;
+            else
+                pos[cnt_p++] = arr[i];
+        }
+    }
+
+    public void sort(int array[]){
+        this.arr = array;
+        this.ex_mode = false;  // if negs exist, turn on extra mode.
+        init();
+        if (!ex_mode){
+            sort(array, max);
+        } else {
+            int m;
+            m = min == Integer.MIN_VALUE ? Integer.MAX_VALUE : -min;
+
+            sort(pos, max);
+            sort(neg, m);
+            for (int i = 0; i < neg.length; i++)
+                neg[i] += min;
+            System.arraycopy(neg, 0, array, 0, neg.length);
+            System.arraycopy(pos, 0, array, neg.length, pos.length);
+        }
+    }
+    public void sort(int array[], int m){
+        for (int exp = 1; m / exp > 0; exp *= 10)
+            countSort(array, exp);
     }
  
     // A function to do counting sort of arr[] according to the digit represented by exp.
@@ -49,19 +102,19 @@ public class RadixSort {
  
         // Change count[i] so that count[i] now contains
         // actual position of this digit in output[]
-        for (i = 1; i < 10; i++)
+        for (int i = 1; i < 10; i++)
             count[i] += count[i - 1];
  
         // Build the output array
-        for (i = n - 1; i >= 0; i--) {
-            output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-            count[(arr[i] / exp) % 10]--;
+        for (int i = n - 1; i >= 0; i--) {
+            output[count[(array[i] / exp) % 10] - 1] = array[i];
+            count[(array[i] / exp) % 10]--;
         }
  
         // Copy the output array to arr[], so that arr[] now
         // contains sorted numbers according to current digit
-        for (i = 0; i < n; i++)
-            arr[i] = output[i];
+        for (int i = 0; i < n; i++)
+            array[i] = output[i];
     }
  
     @Test
@@ -86,6 +139,16 @@ public class RadixSort {
         int[] array    = new arrayGenerator(128, false).toArray();
         sort(array);
         int[] expected = new arrayGenerator(128, true).toArray();
+        assertArrayEquals(expected, array);
+    }
+
+    @Test
+    public void bigRangeTest(){
+        int[] array    = new arrayGenerator(20, false, false, -10000, 10000).toArray();
+        int[] expected = new int[array.length];
+        System.arraycopy(array, 0, expected, 0, array.length);
+        sort(array);
+        Arrays.sort(expected);
         assertArrayEquals(expected, array);
     }
 }
