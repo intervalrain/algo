@@ -4,6 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
 
+import DioUtility.arrayGenerator;
+
 /**
  * Merge Sort: 
  * 
@@ -71,6 +73,14 @@ public class MergeSort {
         int[] array = new int[]{9,8,7,6,5,4,3,2,1};
         sort(array);
         int[] expected = new int[]{1,2,3,4,5,6,7,8,9};
+        assertArrayEquals(expected, array);
+    }
+
+    @Test
+    public void randomTest(){
+        int[] array    = new arrayGenerator(128, false).toArray();
+        sort(array);
+        int[] expected = new arrayGenerator(128, true).toArray();
         assertArrayEquals(expected, array);
     }
 }

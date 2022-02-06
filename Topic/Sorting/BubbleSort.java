@@ -2,9 +2,9 @@ package Topic.Sorting;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import java.util.Arrays;
-
 import org.junit.Test;
+
+import DioUtility.arrayGenerator;
 
 /**
  * Bubble Sort:
@@ -26,7 +26,6 @@ public class BubbleSort {
                     int tmp = array[j-1];
                     array[j-1] = array[j];
                     array[j] = tmp;
-                    System.out.println(Arrays.toString(array));
                 }
             }
         }
@@ -47,4 +46,12 @@ public class BubbleSort {
         int[] expected = new int[]{1,2,3,4,5,6,7,8,9};
         assertArrayEquals(expected, array);
     } 
+
+    @Test
+    public void randomTest(){
+        int[] array    = new arrayGenerator(128, false).toArray();
+        sort(array);
+        int[] expected = new arrayGenerator(128, true).toArray();
+        assertArrayEquals(expected, array);
+    }
 }

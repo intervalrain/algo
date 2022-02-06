@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.Test;
 
+import DioUtility.arrayGenerator;
+
 /**
  * Selection Sort:
  * 
@@ -46,4 +48,12 @@ public class SelectinoSort {
         assertArrayEquals(expected, array);
     }
 
+ 
+    @Test
+    public void randomTest(){
+        int[] array    = new arrayGenerator(128, false).toArray();
+        sort(array);
+        int[] expected = new arrayGenerator(128, true).toArray();
+        assertArrayEquals(expected, array);
+    }
 }
