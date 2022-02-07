@@ -2,8 +2,6 @@ package Topic.Sorting;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import java.util.Arrays;
-
 import org.junit.Test;
 
 import DioUtility.arrayGenerator;
@@ -30,7 +28,6 @@ public class InsertionSort {
                 array[j+1] = array[j];
             }
             array[j + 1] = now;
-            System.out.println(Arrays.toString(array));
         }
     }
 
