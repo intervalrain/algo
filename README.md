@@ -24,6 +24,7 @@
 > + [Counting sort](https://github.com/intervalrain/algo/tree/master/Topic/Sorting/CountingSort.java)
 > + [Radix sort](https://github.com/intervalrain/algo/tree/master/Topic/Sorting/RadixSort.java)
 > + [Bucket Sort](https://github.com/intervalrain/algo/tree/master/Topic/Sorting/BucketSort.java)
+> + [Shell Sort](https://github.com/intervalrain/algo/tree/master/Topic/Sorting/ShellSort.java)
 
 1. [Arrays and Strings](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings)
 > + [Check Permutation](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings/CheckPermutaion.java)

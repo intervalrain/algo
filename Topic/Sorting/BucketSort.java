@@ -13,7 +13,7 @@ import org.junit.Test;
  * 
  * Best Time Complexity: O(n+k)
  * Avg Time Complexity: O(n+k)
- * Worst Time Complexity: O(n^2)
+ * Worst Time Complexity: O(n^2)   -> if data is non-uniformly distributed
  * Space Complexity: O(n)
  */
 
@@ -31,7 +31,7 @@ public class BucketSort {
 
         // 2. put array elements in different buckets
         for (int i = 0; i < n; i++){
-            float idx = array[i] * n;
+            float idx = array[i] * n;    // idx = array * len / (max - min)  max = 1.0, min = 0.0
             buckets[(int)idx].add(array[i]);
         }
 
