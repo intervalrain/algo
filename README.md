@@ -40,6 +40,10 @@
 
 2. [Linked List](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList)
 > + [Remove Duplicates](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList/RemoveDups.java)
+> + [Return Kth to Last](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList/ReturnKthToLast.java)
+> + [Return Kth to Last(C++)](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList/ReturnKthToLast.cpp)
+> + [Delete Middle Node](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList/DeleteMiddleNode.java)
+> + [Partition](https://github.com/intervalrain/algo/tree/master/Topic/LinkedList/Partition.java)
 
 3. [Stack and Queues](https://github.com/intervalrain/algo/tree/master/Topic/StackAndQueues)
 
