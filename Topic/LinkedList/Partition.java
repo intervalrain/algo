@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import DioUtility.LinkedNode;
+import DioUtility.DioInt.ListNode;
 
 /**
  * Write code to partition a linked list around a value x,
@@ -19,11 +19,11 @@ import DioUtility.LinkedNode;
  */
 
 public class Partition {
-    public static LinkedNode partition(LinkedNode node, int delimeter){
-        LinkedNode bigger = new LinkedNode();
-        LinkedNode smaller = new LinkedNode();
-        LinkedNode b = bigger;
-        LinkedNode s = smaller;
+    public static ListNode partition(ListNode node, int delimeter){
+        ListNode bigger = new ListNode();
+        ListNode smaller = new ListNode();
+        ListNode b = bigger;
+        ListNode s = smaller;
         while (node != null){
             if (node.val >= delimeter){
                 b.next = node;
@@ -41,11 +41,11 @@ public class Partition {
 
     @Test
     public void test(){
-        LinkedNode node = new LinkedNode(3,5,8,5,10,2,1);
+        ListNode node = new ListNode(3,5,8,5,10,2,1);
         int delimeter = 5;
-        LinkedNode actual = partition(node, delimeter);
+        ListNode actual = partition(node, delimeter);
         System.out.println(actual.toString());
-        LinkedNode curr = node;
+        ListNode curr = node;
         Map<Integer, Integer> map = new HashMap<>();
         while (curr != null){
             if (curr.val < delimeter){

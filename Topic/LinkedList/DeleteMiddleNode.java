@@ -1,9 +1,9 @@
 package Topic.LinkedList;
 
-import DioUtility.ListNode;
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import org.junit.jupiter.api.Test;
+
+import DioUtility.Generic.ListNode;
 
 /**
  * Implement an algorithm to delete a node in the middle

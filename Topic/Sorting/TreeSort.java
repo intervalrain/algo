@@ -6,8 +6,8 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
-import DioUtility.TreeNode;
 import DioUtility.arrayGenerator;
+import DioUtility.Generic.TreeNode;
 
 /**
  * Tree Sort: 

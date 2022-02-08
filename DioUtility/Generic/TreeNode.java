@@ -1,4 +1,4 @@
-package DioUtility;
+package DioUtility.Generic;
 
 import java.util.List;
 import java.util.ArrayList;

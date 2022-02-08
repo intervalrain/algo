@@ -1,12 +1,13 @@
 package Topic.LinkedList;
 
-import DioUtility.ListNode;
 import java.util.Set;
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.Test;
+
+import DioUtility.Generic.ListNode;
 
 /**
  * Write code to remove duplicates from an unsortee linked list.
