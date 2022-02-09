@@ -1,3 +1,4 @@
+package DioUtility.Generic;
 // package DioUtility;
 
 // public class HashMap<K,V>{

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
-import DioUtility.arrayGenerator;
+import DioUtility.DioInt.arrayGenerator;
 import DioUtility.Generic.TreeNode;
 
 /**

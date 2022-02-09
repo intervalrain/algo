@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.Test;
 
-import DioUtility.arrayGenerator;
+import DioUtility.DioInt.arrayGenerator;
 
 /**
  * Insertion Sort:

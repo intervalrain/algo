@@ -1,4 +1,4 @@
-package DioUtility;
+package DioUtility.DioInt;
 
 import java.util.Arrays;
 

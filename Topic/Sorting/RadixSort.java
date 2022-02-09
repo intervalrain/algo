@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import DioUtility.arrayGenerator;
+import DioUtility.DioInt.arrayGenerator;
  
 /**
  * Radix Sort

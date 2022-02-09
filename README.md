@@ -6,10 +6,16 @@
 >
 ---
 ## [Utility](https://github.com/intervalrain/algo/tree/master/DioUtility)
-1. [TreeNode](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings/TreeNode.java)
-2. [ListNode](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings/ListNode.java)
-3. [HashMap(ongoing)](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings/HashMap.java)
-4. [arrayGenerator](https://github.com/intervalrain/algo/tree/master/Topic/ArrayAndStrings/arrayGenerator.java)
+1. [Generic](https://github.com/intervalrain/algo/tree/master/DioUtility/Generic)
+> + [ListNode](https://github.com/intervalrain/algo/tree/master/DioUtility/Generic/ListNode.java)
+> + [Stack](https://github.com/intervalrain/algo/tree/master/DioUtility/Generic/Stack.java)
+> + [TreeNode](https://github.com/intervalrain/algo/tree/master/DioUtility/Generic/TreeNode.java)
+> + [HashMap(ongoing)](https://github.com/intervalrain/algo/tree/master/DioUtility/Generic/HashMap.java)
+java)
+2. [DioInt](https://github.com/intervalrain/algo/tree/master/DioUtility/DioInt)
+> + [ListNode](https://github.com/intervalrain/algo/tree/master/DioUtility/DioInt/ListNode.java)
+> + [Stack](https://github.com/intervalrain/algo/tree/master/DioUtility/DioInt/Stack.java)
+> + [arrayGenerator](https://github.com/intervalrain/algo/tree/master/DioUtility/DioInt/arrayGenerator.java)
 
 ## [Chapter](https://github.com/intervalrain/algo/tree/master/Topic)
 0. [Sorting](https://github.com/intervalrain/algo/tree/master/Topic/Sorting)
