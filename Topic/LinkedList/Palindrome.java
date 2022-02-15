@@ -2,7 +2,7 @@ package Topic.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.Stack;
+import DioUtility.Generic.Stack;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 

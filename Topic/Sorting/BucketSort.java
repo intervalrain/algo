@@ -2,7 +2,8 @@ package Topic.Sorting;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import java.util.Vector;
+import java.util.List;
+import java.util.ArrayList;
 
 import org.junit.Test;
 
@@ -22,11 +23,11 @@ public class BucketSort {
     public static void sort(float[] array){
         int n = array.length;
         @SuppressWarnings("unchecked")
-        Vector<Float>[] buckets = new Vector[n];
+        List<Float>[] buckets = new ArrayList[n];
 
         // 1. create n empty buckets
         for (int i = 0; i < n; i++){
-            buckets[i] = new Vector<Float>();
+            buckets[i] = new ArrayList<Float>();
         }
 
         // 2. put array elements in different buckets
@@ -49,7 +50,7 @@ public class BucketSort {
         }
     }
 
-    public static void insertionSort(Vector<Float> buckets){
+    public static void insertionSort(List<Float> buckets){
         int i, j;
         for (i = 1; i < buckets.size(); i++){
             float curr = buckets.get(i);
@@ -58,7 +59,7 @@ public class BucketSort {
                     break;
                 }
             }
-            buckets.insertElementAt(buckets.remove(i), j + 1);
+            buckets.add(j + 1, buckets.remove(i));
         }
     }
  
