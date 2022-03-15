@@ -1,7 +1,9 @@
 package DioUtility.Generic;
 
+
 import java.util.Arrays;
 import java.util.Collection;
+
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
@@ -111,6 +113,7 @@ public class Queue<T> {
 
     public T remove(){
         if (first == null) throw new NoSuchElementException();
+
         T val = first.val;
         first = first.next;
         if (first == null)
