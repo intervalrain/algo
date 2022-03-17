@@ -226,7 +226,7 @@ public class HashMap<K,V>{  // extends AbstractMap<K,V> implements Map<K,V>, CLo
                       (int)ft : Integer.MAX_VALUE);
         }
         threshold = newThr;
-        @SuppressWarnings({"rawtypes","unchecked"})
+        @SuppressWarnings({"rawtype","unchecked"})
         Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
         table = newTab;
         if (oldTab != null) {
