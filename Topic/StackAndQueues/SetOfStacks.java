@@ -136,9 +136,9 @@ public class SetOfStacks {
 
     private boolean checkInBound(int index){
         if (index < 0) return false;
-        int alen, idx;
+        int alen;
         if ((alen = index / capacity) > stacks.size()) return false;
-        if (alen == stacks.size() && ((idx = index % capacity)) > getLastStack().size) return false;
+        if (alen == stacks.size() && ((index % capacity)) > getLastStack().size) return false;
         return true;
     }
 
@@ -200,6 +200,12 @@ public class SetOfStacks {
         int idx = index % capacity;
         Stack st = getStack(n);
         return st.getNode(idx).val;
+    }
+
+    public int peek() throws NullPointerException{
+        Stack stack = getLastStack();
+        if (stack == null || stack.size == 0) throw new NullPointerException();
+        return stack.peek();
     }
 
     public int popAt(int index) throws NullPointerException{
