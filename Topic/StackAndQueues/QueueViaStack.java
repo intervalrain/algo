@@ -1,6 +1,7 @@
 package Topic.StackAndQueues;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Stack;
 
@@ -8,6 +9,11 @@ import DioUtility.Generic.ListNode;
 
 import java.util.NoSuchElementException;
 
+/**
+ * Queue via Stacks
+ * 
+ * Implement a Queue class which implements a queue using two stacks.
+ */
 
 public class QueueViaStack<T>{
 
@@ -163,13 +169,13 @@ public class QueueViaStack<T>{
     //     return null;
     // }
 
-    // public boolean containsAll(Collection<?> c) {
-    //     return false;
-    // }
-
-    // public boolean addAll(Collection<? extends T> c) {
-    //     return false;
-    // }
+    @SuppressWarnings("unchecked")
+    public boolean addAll(Collection<? extends T> c) {
+        for (Object o : c.toArray()){
+            this.newst.push((T)o);
+        }
+        return false;
+    }
 
     // public boolean removeAll(Collection<?> c) {
     //     return false;
