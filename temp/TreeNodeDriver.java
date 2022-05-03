@@ -1,5 +1,5 @@
 package temp;
-import DioUtility.Generic.TreeNode;
+import src.DioUtility.Generic.TreeNode;
 
 public class TreeNodeDriver {
     public static void main(String[] args){

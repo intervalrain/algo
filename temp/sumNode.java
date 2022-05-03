@@ -1,5 +1,5 @@
 package temp;
-import DioUtility.Generic.TreeNode;
+import src.DioUtility.Generic.TreeNode;
 
 /**
  * To illustrate big(O) of sumNode:
