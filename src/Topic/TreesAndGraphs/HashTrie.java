@@ -3,7 +3,7 @@ package src.Topic.TreesAndGraphs;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class Solution {
+public class HashTrie {
 
     static class MyStack{
 
