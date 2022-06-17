@@ -1,6 +1,7 @@
 package src.DioUtility.DioInt;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class TreeNode {
     public Integer val;
@@ -50,6 +51,32 @@ public class TreeNode {
     public static TreeNode arrayToTree(Integer[] array){
         return arrayToTree(array, 0);
     }
+
+    public static TreeNode buildTree(Integer[] array){
+        LinkedList<TreeNode> dq = new LinkedList<TreeNode>();
+        TreeNode root = new TreeNode(array[0]);
+        dq.add(root);
+        int i = 1;
+        while (i < array.length){
+            int n = dq.size();
+            for (int j = 0; j < n; j++){
+                TreeNode q = dq.pollFirst();
+                if (array[i] != null){
+                    q.left = new TreeNode(array[i]);
+                    dq.addLast(q.left);
+                }
+                i++;
+                if (i >= array.length) break;
+                if (array[i] != null){
+                    q.right = new TreeNode(array[i]);
+                    dq.addLast(q.right);
+                }
+                i++; 
+            }
+        }
+        return root;
+    }
+
     public static TreeNode arrayToTreeInRightSubtreeOnly(Integer[] array){
         TreeNode curr = new TreeNode(array[array.length-1]);
         for (int i = array.length-2; i >= 0; i--){
